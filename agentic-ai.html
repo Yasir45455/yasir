@@ -1,66 +1,239 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Agentic AI â€” Yasir Masood</title>
+  <title>Agentic AI — Yasir Masood</title>
   <meta name="description" content="Practical AI agents and workflow automation for customer support, sales, research, content and internal operations.">
   <link rel="canonical" href="https://yourdomain.com/agentic-ai.html">
-  <meta property="og:type" content="website"><meta property="og:title" content="Agentic AI â€” Yasir Masood"><meta property="og:description" content="Practical AI agents and workflow automation for customer support, sales, research, content and internal operations."><meta property="og:url" content="https://yourdomain.com/agentic-ai.html">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Agentic AI â€” Yasir Masood"><meta name="twitter:description" content="Practical AI agents and workflow automation for customer support, sales, research, content and internal operations.">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Agentic AI — Yasir Masood">
+  <meta property="og:description" content="Practical AI agents and workflow automation for customer support, sales, research, content and internal operations.">
+  <meta property="og:url" content="https://yourdomain.com/agentic-ai.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#42c775">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: {
-      fontFamily: { sans: ['Inter', 'sans-serif'] },
-      colors: {
-        brand: { DEFAULT:'#021B59', 50:'#f0f4ff', 100:'#e0e9fe', 600:'#0284c7', 700:'#0369a1', navy:'#021B59', navyHover:'#011340' },
-        ink:'#021B59', mist:'#FFFFFF'
-      }
-    } } };
-  </script>
+  <script src="js/tailwind-config.js"></script>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-navy selection:text-white"><header data-navbar class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-white/85 backdrop-blur-md">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Primary navigation">
-    <a href="index.html" class="flex items-center gap-2.5 font-bold tracking-tight text-brand-navy" aria-label="Home"><span class="flex h-8 w-8 items-center justify-center rounded-md bg-brand-navy text-xs font-semibold text-white shadow-sm">YM</span><span class="text-base">YASIR MASOOD<span class="text-brand-600">.</span></span></a>
-    <div class="hidden items-center gap-8 text-sm font-medium text-slate-600 lg:flex">
-      <a href="index.html" class="hover:text-brand-navy transition-colors">Home</a>
-      <button data-mega-toggle aria-expanded="false" aria-controls="services-mega" class="flex items-center gap-1.5 text-brand-navy font-semibold">Services <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400"></i></button>
-      <a href="gallery.html" class="hover:text-brand-navy transition-colors">Work Gallery</a>
-      
-      <div class="relative">
-        <button data-about-toggle aria-expanded="false" aria-controls="about-menu" class="flex items-center gap-1.5 hover:text-brand-navy transition-colors">About <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400"></i></button>
-        <div id="about-menu" data-about-menu data-open="false" class="about-panel absolute top-[34px] z-50 p-1.5">
-          <a href="about.html"><i data-lucide="user-round" class="h-4 w-4"></i><span><strong class="block text-sm">About Me</strong><small class="text-slate-500">Background and approach</small></span></a>
-          <a href="skills.html"><i data-lucide="badge-check" class="h-4 w-4"></i><span><strong class="block text-sm">Skills</strong><small class="text-slate-500">Tools and capabilities</small></span></a>
-          <a href="experience.html"><i data-lucide="briefcase-business" class="h-4 w-4"></i><span><strong class="block text-sm">Experience</strong><small class="text-slate-500">Roles and milestones</small></span></a>
+
+<body class="bg-bg font-sans text-fg antialiased">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header data-navbar class="site-header">
+    <div class="wrap">
+      <nav class="nav-pill" aria-label="Primary">
+        <a href="index.html" class="flex items-center gap-2.5 font-display font-bold tracking-tight" aria-label="Yasir Masood — Home">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border-[1.5px] border-fg bg-accent text-xs font-bold text-ink" aria-hidden="true">YM</span>
+          <span class="hidden text-base sm:inline">YASIR MASOOD.</span>
+        </a>
+
+        <div class="hidden items-center gap-1 lg:flex">
+          <a href="index.html" class="nav-link">Home</a>
+          <div data-dropdown>
+            <button type="button" data-dropdown-toggle class="nav-link" aria-expanded="false" aria-controls="services-mega" aria-current="page">Services <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+            <div id="services-mega" data-dropdown-panel data-open="false" class="dropdown-panel dropdown-panel--mega">
+              <div class="grid grid-cols-4 gap-1 p-3">
+          <a href="web-development.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="code-2" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">Web Development</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">Websites, SaaS platforms & dashboards</span></span>
+          </a>
+          <a href="app-development.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="smartphone" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">App Development</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">High-performance mobile applications</span></span>
+          </a>
+          <a href="digital-marketing.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="trending-up" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">Digital Growth</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">Marketing and SEO strategies</span></span>
+          </a>
+          <a href="agentic-ai.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="bot" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">Agentic AI</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">Autonomous workflows & custom agents</span></span>
+          </a>
+              </div>
+              <div class="flex items-center justify-between rounded-b-[1.4rem] border-t-[1.5px] border-fg bg-subtle px-6 py-3 text-xs">
+                <span class="text-muted">Structured solutions tailored for scalable enterprise growth.</span>
+                <a href="services.html" class="link-arrow">View all capabilities &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <a href="gallery.html" class="nav-link">Work Gallery</a>
+          <div data-dropdown class="relative">
+            <button type="button" data-dropdown-toggle class="nav-link" aria-expanded="false" aria-controls="about-menu">About <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+            <div id="about-menu" data-dropdown-panel data-open="false" class="dropdown-panel dropdown-panel--menu">
+            <a href="about.html" class="dropdown-item"><span class="icon-chip"><i data-lucide="user-round" class="h-4 w-4"></i></span><span><strong class="block text-sm">About Me</strong><small class="text-muted">Background and approach</small></span></a>
+            <a href="skills.html" class="dropdown-item"><span class="icon-chip"><i data-lucide="badge-check" class="h-4 w-4"></i></span><span><strong class="block text-sm">Skills</strong><small class="text-muted">Tools and capabilities</small></span></a>
+            <a href="experience.html" class="dropdown-item"><span class="icon-chip"><i data-lucide="briefcase-business" class="h-4 w-4"></i></span><span><strong class="block text-sm">Experience</strong><small class="text-muted">Roles and milestones</small></span></a>
+            </div>
+          </div>
+          <a href="process.html" class="nav-link">Process</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button type="button" data-theme-toggle class="icon-btn" aria-label="Toggle dark mode" aria-pressed="false">
+            <i data-lucide="moon" class="icon-moon h-[18px] w-[18px]"></i><i data-lucide="sun" class="icon-sun h-[18px] w-[18px]"></i>
+          </button>
+          <a href="contact.html" class="btn btn-accent btn-sm !hidden lg:!inline-flex">Let's Talk <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+          <button type="button" data-mobile-toggle class="icon-btn lg:!hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <i data-lucide="menu" data-icon-open class="h-5 w-5"></i><i data-lucide="x" data-icon-close class="hidden h-5 w-5"></i>
+          </button>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" data-mobile-menu class="mobile-menu hidden max-h-[calc(100vh-6rem)] overflow-y-auto p-4 lg:hidden">
+        <div class="space-y-1 font-display text-lg font-semibold">
+          <a class="block rounded-lg px-3 py-2.5 hover:bg-accent hover:text-ink" href="index.html">Home</a>
+          <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="m-services" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left">Services <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div id="m-services" class="hidden border-l-[1.5px] border-fg pl-3 font-sans text-base font-normal"><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="web-development.html">Web Development</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="app-development.html">App Development</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="digital-marketing.html">Digital Marketing</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="agentic-ai.html">Agentic AI</a></div>
+          <a class="block rounded-lg px-3 py-2.5 hover:bg-accent hover:text-ink" href="gallery.html">Work Gallery</a>
+          <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="m-about" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left">About <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div id="m-about" class="hidden border-l-[1.5px] border-fg pl-3 font-sans text-base font-normal"><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="about.html">About Me</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="skills.html">Skills</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="experience.html">Experience</a></div>
+          <a class="block rounded-lg px-3 py-2.5 hover:bg-accent hover:text-ink" href="process.html">Process</a>
+          <a class="btn btn-accent mt-3 w-full" href="contact.html">Contact</a>
         </div>
       </div>
-      <a href="process.html" class="hover:text-brand-navy transition-colors">Process</a>
     </div>
-    <div class="hidden lg:block"><a href="contact.html" class="inline-flex items-center justify-center rounded-lg bg-brand-navy px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-navyHover">Let's Talk</a></div>
-    <button data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu" class="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-slate-100 lg:hidden" aria-label="Open menu"><i data-lucide="menu" class="h-5 w-5"></i></button>
-  </nav>
-  <div id="services-mega" data-mega data-open="false" class="mega-panel absolute left-1/2 top-[72px] hidden w-[min(1020px,calc(100%-40px))] -translate-x-1/2 border border-slate-200/80 bg-white/95 shadow-xl shadow-brand-navy/5 backdrop-blur-xl lg:block">
-    <div class="grid grid-cols-2 divide-x divide-y divide-slate-100 p-2 md:grid-cols-4 md:divide-y-0">
-      <a href="web-development.html" class="group rounded-lg p-5 transition-all hover:bg-brand-50/50"><div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-brand-navy shadow-sm transition-all group-hover:border-brand-navy group-hover:bg-brand-navy group-hover:text-white"><i data-lucide="code-2" class="h-5 w-5"></i></div><h3 class="text-sm font-semibold text-brand-navy">Web Development</h3><p class="mt-1 text-xs leading-relaxed text-slate-500">Websites, SaaS platforms & dashboards</p></a><a href="app-development.html" class="group rounded-lg p-5 transition-all hover:bg-brand-50/50"><div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-brand-navy shadow-sm transition-all group-hover:border-brand-navy group-hover:bg-brand-navy group-hover:text-white"><i data-lucide="smartphone" class="h-5 w-5"></i></div><h3 class="text-sm font-semibold text-brand-navy">App Development</h3><p class="mt-1 text-xs leading-relaxed text-slate-500">High-performance mobile applications</p></a><a href="digital-marketing.html" class="group rounded-lg p-5 transition-all hover:bg-brand-50/50"><div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-brand-navy shadow-sm transition-all group-hover:border-brand-navy group-hover:bg-brand-navy group-hover:text-white"><i data-lucide="trending-up" class="h-5 w-5"></i></div><h3 class="text-sm font-semibold text-brand-navy">Digital Growth</h3><p class="mt-1 text-xs leading-relaxed text-slate-500">Marketing and SEO strategies</p></a><a href="agentic-ai.html" class="group rounded-lg p-5 transition-all hover:bg-brand-50/50"><div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-brand-navy shadow-sm transition-all group-hover:border-brand-navy group-hover:bg-brand-navy group-hover:text-white"><i data-lucide="bot" class="h-5 w-5"></i></div><h3 class="text-sm font-semibold text-brand-navy">Agentic AI</h3><p class="mt-1 text-xs leading-relaxed text-slate-500">Autonomous workflows & custom agents</p></a>
-    </div>
-    <div class="flex items-center justify-between rounded-b-xl border-t border-slate-100 bg-slate-50/50 px-6 py-3 text-xs"><span class="text-slate-500">Structured solutions tailored for scalable enterprise growth.</span><a href="services.html" class="font-semibold text-brand-navy hover:text-brand-600">View all capabilities &rarr;</a></div>
-  </div>
-  <div id="mobile-menu" data-mobile-menu class="hidden border-t border-slate-200 bg-white px-6 py-5 lg:hidden">
-    <div class="space-y-1 text-sm text-slate-700">
-      <a class="block py-2 font-medium" href="index.html">Home</a>
-      <button data-mobile-services-toggle aria-expanded="false" class="flex w-full items-center justify-between py-2 font-medium">Services <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
-      <div data-mobile-services class="hidden border-l border-slate-200 pl-4 text-slate-600"><a class="block py-2" href="web-development.html">Web Development</a><a class="block py-2" href="app-development.html">App Development</a><a class="block py-2" href="digital-marketing.html">Digital Marketing</a><a class="block py-2" href="agentic-ai.html">Agentic AI</a></div>
-      <a class="block py-2 font-medium" href="gallery.html">Work Gallery</a>
-      <button data-mobile-about-toggle aria-expanded="false" class="flex w-full items-center justify-between py-2 font-medium">About <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
-      <div data-mobile-about class="hidden border-l border-slate-200 pl-4 text-slate-600"><a class="block py-2" href="about.html">About Me</a><a class="block py-2" href="skills.html">Skills</a><a class="block py-2" href="experience.html">Experience</a></div>
-      <a class="block py-2 font-medium" href="process.html">Process</a><a class="block py-2 font-medium" href="contact.html">Contact</a>
-    </div>
-  </div>
-</header><section class="pt-32 pb-20"><div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center lg:px-8"><div><p class="mb-4 text-sm font-semibold uppercase tracking-[.18em] text-brand-navy">Agentic AI</p><h1 class="max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-.035em] text-brand-navy sm:text-5xl lg:text-6xl">AI that works inside the business.</h1><p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">Design useful agents and automated workflows that can reason, use tools, keep context and complete defined business tasks.</p><div class="mt-8"><a href="contact.html" class="rounded-lg bg-brand-navy px-6 py-3 text-sm font-semibold text-white hover:bg-brand-navy">Discuss AI Automation â†’</a></div></div><div><img src="assets/images/projects/project-04.webp" alt="Work and client collaboration placeholder" class="aspect-[4/3] w-full object-cover" loading="eager"><p class="mt-2 text-xs text-slate-400">Replace this placeholder with your real work or client photo.</p></div></div></section><section class="bg-slate-100 py-24"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="max-w-2xl"><p class="text-sm font-semibold uppercase tracking-[.16em] text-brand-navy">Use cases</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.03em] text-brand-navy sm:text-4xl">Where agents help</h2></div><div class="mt-10 grid gap-x-12 md:grid-cols-2"><div class="border-t border-slate-300 py-6"><div class="flex gap-4"><i data-lucide="headphones" class="mt-1 h-5 w-5 shrink-0 text-brand-navy"></i><div><h2 class="font-semibold text-brand-navy">Customer Support</h2><p class="mt-2 text-sm leading-6 text-slate-600">Handle common questions, retrieve approved information and route exceptions.</p></div></div></div><div class="border-t border-slate-300 py-6"><div class="flex gap-4"><i data-lucide="badge-dollar-sign" class="mt-1 h-5 w-5 shrink-0 text-brand-navy"></i><div><h2 class="font-semibold text-brand-navy">Sales Support</h2><p class="mt-2 text-sm leading-6 text-slate-600">Qualify leads, answer product questions and help teams respond faster.</p></div></div></div><div class="border-t border-slate-300 py-6"><div class="flex gap-4"><i data-lucide="search" class="mt-1 h-5 w-5 shrink-0 text-brand-navy"></i><div><h2 class="font-semibold text-brand-navy">Research</h2><p class="mt-2 text-sm leading-6 text-slate-600">Collect, organize and summarize information for defined research tasks.</p></div></div></div><div class="border-t border-slate-300 py-6"><div class="flex gap-4"><i data-lucide="file-text" class="mt-1 h-5 w-5 shrink-0 text-brand-navy"></i><div><h2 class="font-semibold text-brand-navy">Content Workflows</h2><p class="mt-2 text-sm leading-6 text-slate-600">Support research, drafting, review and publishing steps.</p></div></div></div><div class="border-t border-slate-300 py-6"><div class="flex gap-4"><i data-lucide="workflow" class="mt-1 h-5 w-5 shrink-0 text-brand-navy"></i><div><h2 class="font-semibold text-brand-navy">Business Automation</h2><p class="mt-2 text-sm leading-6 text-slate-600">Connect repetitive steps across tools and teams.</p></div></div></div><div class="border-t border-slate-300 py-6"><div class="flex gap-4"><i data-lucide="users" class="mt-1 h-5 w-5 shrink-0 text-brand-navy"></i><div><h2 class="font-semibold text-brand-navy">Multi-Agent Systems</h2><p class="mt-2 text-sm leading-6 text-slate-600">Use specialized agents when a workflow genuinely benefits from separate roles.</p></div></div></div></div></div></section><section class="py-24"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="max-w-2xl"><p class="text-sm font-semibold uppercase tracking-[.16em] text-brand-navy">Architecture</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.03em] text-brand-navy sm:text-4xl">A simple agent model</h2><p class="mt-4 text-base leading-7 text-slate-600">Keep the system understandable: reasoning, tools and context should lead to a controlled action and a useful result.</p></div><div class="mt-10 border border-slate-300 bg-slate-50 p-8 sm:p-12"><div class="mx-auto max-w-3xl text-center"><div class="inline-flex items-center gap-2 rounded-full bg-brand-navy px-4 py-2 text-sm font-semibold text-white"><i data-lucide="bot" class="h-4 w-4"></i> AI Agent</div><div class="mx-auto my-5 h-8 w-px bg-slate-300"></div><div class="grid gap-4 sm:grid-cols-3"><div class="border border-slate-300 bg-white p-5"><i data-lucide="brain" class="mx-auto h-5 w-5 text-brand-navy"></i><strong class="mt-2 block">Reason</strong></div><div class="border border-slate-300 bg-white p-5"><i data-lucide="wrench" class="mx-auto h-5 w-5 text-brand-navy"></i><strong class="mt-2 block">Tools</strong></div><div class="border border-slate-300 bg-white p-5"><i data-lucide="database" class="mx-auto h-5 w-5 text-brand-navy"></i><strong class="mt-2 block">Context</strong></div></div><div class="mx-auto my-5 h-8 w-px bg-slate-300"></div><div class="text-sm text-slate-600">Controlled Action â†’ Useful Result</div></div></div></div></section><section class="bg-slate-50 py-24"><div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="max-w-2xl"><p class="text-sm font-semibold uppercase tracking-[.16em] text-brand-navy">Process</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.03em] text-brand-navy sm:text-4xl">From problem to agent</h2></div><ol class="mt-10 grid gap-0 border-y border-slate-200 md:grid-cols-4"><li class="border-b border-slate-200 py-6 md:border-b-0 md:border-r md:px-6 last:md:border-r-0"><span class="text-xs font-semibold text-brand-navy">01</span><h3 class="mt-3 font-semibold">Workflow</h3><p class="mt-2 text-sm leading-6 text-slate-500">Map the real task and exceptions.</p></li><li class="border-b border-slate-200 py-6 md:border-b-0 md:border-r md:px-6 last:md:border-r-0"><span class="text-xs font-semibold text-brand-navy">02</span><h3 class="mt-3 font-semibold">Architecture</h3><p class="mt-2 text-sm leading-6 text-slate-500">Define agent roles, context and limits.</p></li><li class="border-b border-slate-200 py-6 md:border-b-0 md:border-r md:px-6 last:md:border-r-0"><span class="text-xs font-semibold text-brand-navy">03</span><h3 class="mt-3 font-semibold">Integrations</h3><p class="mt-2 text-sm leading-6 text-slate-500">Connect only the tools the workflow needs.</p></li><li class="border-b border-slate-200 py-6 md:border-b-0 md:border-r md:px-6 last:md:border-r-0"><span class="text-xs font-semibold text-brand-navy">04</span><h3 class="mt-3 font-semibold">Deploy</h3><p class="mt-2 text-sm leading-6 text-slate-500">Test, monitor and improve based on real use.</p></li></ol></div></section><section class="py-24"><div class="mx-auto max-w-4xl px-6 lg:px-8"><div class="max-w-2xl"><p class="text-sm font-semibold uppercase tracking-[.16em] text-brand-navy">FAQ</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.03em] text-brand-navy sm:text-4xl">Common questions</h2></div><div class="mt-8 divide-y divide-slate-200 border-y border-slate-200"><div class="faq-item" data-open="false"><button class="flex w-full items-center justify-between gap-6 py-5 text-left font-semibold" aria-expanded="false"><span>What is an AI agent?</span><i data-lucide="plus" class="h-5 w-5 text-slate-400"></i></button><div class="faq-answer hidden pb-5 text-sm leading-7 text-slate-600"><div>An AI agent is software that uses a model plus defined tools and context to complete a bounded task or workflow.</div></div></div><div class="faq-item" data-open="false"><button class="flex w-full items-center justify-between gap-6 py-5 text-left font-semibold" aria-expanded="false"><span>Can AI automate repetitive business tasks?</span><i data-lucide="plus" class="h-5 w-5 text-slate-400"></i></button><div class="faq-answer hidden pb-5 text-sm leading-7 text-slate-600"><div>Often yes, especially when the task is well-defined and the required information and tools are available.</div></div></div><div class="faq-item" data-open="false"><button class="flex w-full items-center justify-between gap-6 py-5 text-left font-semibold" aria-expanded="false"><span>Can AI connect to existing systems?</span><i data-lucide="plus" class="h-5 w-5 text-slate-400"></i></button><div class="faq-answer hidden pb-5 text-sm leading-7 text-slate-600"><div>Yes, where suitable APIs or integrations exist. The integration approach depends on the systems involved.</div></div></div><div class="faq-item" data-open="false"><button class="flex w-full items-center justify-between gap-6 py-5 text-left font-semibold" aria-expanded="false"><span>Should every workflow use an agent?</span><i data-lucide="plus" class="h-5 w-5 text-slate-400"></i></button><div class="faq-answer hidden pb-5 text-sm leading-7 text-slate-600"><div>No. Simple automation is often better for deterministic tasks. Agentic AI is useful when reasoning or flexible language handling adds value.</div></div></div></div></div></section><section class="bg-brand-navy py-16 text-white"><div class="mx-auto flex max-w-7xl flex-col gap-6 px-6 sm:flex-row sm:items-end sm:justify-between lg:px-8"><div><p class="text-sm font-semibold uppercase tracking-[.16em] text-emerald-300">Start a project</p><h2 class="mt-3 text-3xl font-semibold tracking-[-.03em] sm:text-4xl">Have something useful to build?</h2><p class="mt-3 max-w-2xl text-slate-300">Tell me what you are trying to achieve. Iâ€™ll help define the right digital approach.</p></div><a href="contact.html" class="inline-flex w-fit items-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-navy hover:bg-slate-100">Let's Talk â†’</a></div></section><footer class="border-t border-slate-200 bg-white text-sm text-slate-600"><div class="mx-auto max-w-7xl px-6 py-12 lg:px-8"><div class="grid gap-8 md:grid-cols-4"><div><a href="index.html" class="font-bold text-brand-navy">YASIR MASOOD<span class="text-brand-600">.</span></a><p class="mt-3 text-xs leading-relaxed text-slate-500">Digital products, software architectures, and AI systems tailored for scalable growth.</p></div><div><h4 class="text-xs font-semibold uppercase tracking-wider text-brand-navy">Capabilities</h4><ul class="mt-3 space-y-2 text-xs"><li><a class="hover:text-brand-navy" href="web-development.html">Web Development</a></li><li><a class="hover:text-brand-navy" href="app-development.html">App Development</a></li><li><a class="hover:text-brand-navy" href="digital-marketing.html">Digital Marketing</a></li><li><a class="hover:text-brand-navy" href="agentic-ai.html">Agentic AI</a></li></ul></div><div><h4 class="text-xs font-semibold uppercase tracking-wider text-brand-navy">Company</h4><ul class="mt-3 space-y-2 text-xs"><li><a class="hover:text-brand-navy" href="gallery.html">Work Gallery</a></li><li><a class="hover:text-brand-navy" href="about.html">About</a></li><li><a class="hover:text-brand-navy" href="skills.html">Skills</a></li><li><a class="hover:text-brand-navy" href="experience.html">Experience</a></li><li><a class="hover:text-brand-navy" href="process.html">Process</a></li></ul></div><div><h4 class="text-xs font-semibold uppercase tracking-wider text-brand-navy">Connect</h4><ul class="mt-3 space-y-2 text-xs"><li><a class="hover:text-brand-navy" href="mailto:yasirkh261@gmail.com">Email</a></li><li><a class="hover:text-brand-navy" href="https://www.linkedin.com/in/yasir-masood-bbb873240/">LinkedIn</a></li><li><a class="hover:text-brand-navy" href="https://github.com">GitHub</a></li></ul></div></div><div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-6 text-xs text-slate-400 sm:flex-row"><p>&copy; <span data-year>2026</span> Yasir Masood. All rights reserved.</p><p>Built with modern web standards.</p></div></div></footer><script src="js/main.js" defer></script></body></html>
+  </header>
 
+  <main id="main">
+    <section class="page-hero isolate pt-32 pb-16 lg:pt-44 lg:pb-24">
+      <div class="dots absolute inset-0 -z-10 opacity-70 [mask-image:linear-gradient(to_bottom,#000,transparent_85%)]" aria-hidden="true"></div>
+      <span class="big-index" aria-hidden="true">04</span>
+      <div class="wrap grid items-center gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <nav aria-label="Breadcrumb" class="mono text-xs uppercase tracking-[.14em] text-muted"><a href="index.html" class="hover:underline">Home</a> <span aria-hidden="true">/</span> <a href="services.html" class="hover:underline">Services</a> <span aria-hidden="true">/</span> <span class="text-fg" aria-current="page">AI that works inside the business.</span></nav>
+          <p class="eyebrow mt-8">Agentic AI</p>
+          <h1 class="display mt-5 text-5xl sm:text-6xl lg:text-8xl">AI that works inside the business.</h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-muted sm:text-xl">Design useful agents and automated workflows that can reason, use tools, keep context and complete defined business tasks.</p>
+          <div class="mt-9 flex flex-wrap gap-3"><a href="contact.html" class="btn btn-accent">Discuss AI Automation <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a></div>
+        </div>
+        <div class="lg:col-span-5"><figure class="tilt-frame"><img src="assets/images/projects/project-04.webp" alt="Work and client collaboration placeholder" width="1200" height="900" loading="eager" class="aspect-[4/3] object-cover"></figure>
+          <p class="mt-5 text-xs text-faint">Replace this placeholder with your real work or client photo.</p></div>
+      </div>
+    </section>
+    <section class="py-24 lg:py-32">
+      <div class="wrap">
+        <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="eyebrow">01 — Use cases</p>
+            <h2 class="display mt-4 max-w-4xl text-4xl sm:text-5xl lg:text-6xl">Where agents help</h2>
+          </div>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="card card-hover accent-hover flex min-h-[13rem] flex-col justify-between p-6" data-reveal><span class="icon-chip"><i data-lucide="headphones" class="h-5 w-5"></i></span><div class="mt-10"><h3 class="display text-2xl">Customer Support</h3><p class="mt-2 text-sm leading-6 text-muted">Handle common questions, retrieve approved information and route exceptions.</p></div></article>
+          <article class="card card-hover accent-hover flex min-h-[13rem] flex-col justify-between p-6" data-reveal><span class="icon-chip"><i data-lucide="badge-dollar-sign" class="h-5 w-5"></i></span><div class="mt-10"><h3 class="display text-2xl">Sales Support</h3><p class="mt-2 text-sm leading-6 text-muted">Qualify leads, answer product questions and help teams respond faster.</p></div></article>
+          <article class="card card-hover accent-hover flex min-h-[13rem] flex-col justify-between p-6" data-reveal><span class="icon-chip"><i data-lucide="search" class="h-5 w-5"></i></span><div class="mt-10"><h3 class="display text-2xl">Research</h3><p class="mt-2 text-sm leading-6 text-muted">Collect, organize and summarize information for defined research tasks.</p></div></article>
+          <article class="card card-hover accent-hover flex min-h-[13rem] flex-col justify-between p-6" data-reveal><span class="icon-chip"><i data-lucide="file-text" class="h-5 w-5"></i></span><div class="mt-10"><h3 class="display text-2xl">Content Workflows</h3><p class="mt-2 text-sm leading-6 text-muted">Support research, drafting, review and publishing steps.</p></div></article>
+          <article class="card card-hover accent-hover flex min-h-[13rem] flex-col justify-between p-6" data-reveal><span class="icon-chip"><i data-lucide="workflow" class="h-5 w-5"></i></span><div class="mt-10"><h3 class="display text-2xl">Business Automation</h3><p class="mt-2 text-sm leading-6 text-muted">Connect repetitive steps across tools and teams.</p></div></article>
+          <article class="card card-hover accent-hover flex min-h-[13rem] flex-col justify-between p-6" data-reveal><span class="icon-chip"><i data-lucide="users" class="h-5 w-5"></i></span><div class="mt-10"><h3 class="display text-2xl">Multi-Agent Systems</h3><p class="mt-2 text-sm leading-6 text-muted">Use specialized agents when a workflow genuinely benefits from separate roles.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="border-y-[1.5px] border-fg bg-subtle py-24 lg:py-32">
+      <div class="wrap grid items-center gap-14 lg:grid-cols-2">
+        <div><p class="eyebrow">02 — Architecture</p><h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">A simple agent model</h2><p class="mt-6 max-w-lg text-lg leading-8 text-muted">Keep the system understandable: reasoning, tools and context should lead to a controlled action and a useful result.</p></div>
+        <div class="space-y-4" role="group" aria-label="Agent model diagram">
+          <div class="card card-accent flex items-center justify-center gap-3 p-6 font-display text-2xl font-bold"><i data-lucide="bot" class="h-7 w-7"></i> AI Agent</div>
+          <div class="flex justify-center text-fg" aria-hidden="true"><i data-lucide="arrow-down" class="h-6 w-6"></i></div>
+          <ul class="grid gap-4 sm:grid-cols-3"><li class="card flex items-center gap-3 p-5"><span class="icon-chip"><i data-lucide="brain" class="h-5 w-5"></i></span><strong class="display text-xl">Reason</strong></li><li class="card flex items-center gap-3 p-5"><span class="icon-chip"><i data-lucide="wrench" class="h-5 w-5"></i></span><strong class="display text-xl">Tools</strong></li><li class="card flex items-center gap-3 p-5"><span class="icon-chip"><i data-lucide="database" class="h-5 w-5"></i></span><strong class="display text-xl">Context</strong></li></ul>
+          <div class="flex justify-center text-fg" aria-hidden="true"><i data-lucide="arrow-down" class="h-6 w-6"></i></div>
+          <div class="card p-6 text-center font-display text-xl font-bold">Controlled Action → Useful Result</div>
+        </div>
+      </div>
+    </section>
+    <section class="on-ink panel-ink py-24 text-paper lg:py-32">
+      <div class="wrap"><div class="mb-12"><p class="eyebrow !text-[#b2aea2]">03 — Process</p><h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">From problem to agent</h2></div>
+      <ol class="proc-ink grid gap-5 sm:grid-cols-2 lg:grid-cols-4"><li class="card card-hover accent-hover p-6" data-reveal><span class="mono text-sm text-muted">01</span><h3 class="display mt-10 text-2xl">Workflow</h3><p class="mt-2 text-sm leading-6 text-muted">Map the real task and exceptions.</p></li><li class="card card-hover accent-hover p-6" data-reveal><span class="mono text-sm text-muted">02</span><h3 class="display mt-10 text-2xl">Architecture</h3><p class="mt-2 text-sm leading-6 text-muted">Define agent roles, context and limits.</p></li><li class="card card-hover accent-hover p-6" data-reveal><span class="mono text-sm text-muted">03</span><h3 class="display mt-10 text-2xl">Integrations</h3><p class="mt-2 text-sm leading-6 text-muted">Connect only the tools the workflow needs.</p></li><li class="card card-hover accent-hover p-6" data-reveal><span class="mono text-sm text-muted">04</span><h3 class="display mt-10 text-2xl">Deploy</h3><p class="mt-2 text-sm leading-6 text-muted">Test, monitor and improve based on real use.</p></li></ol></div>
+    </section>
+    <section class="py-24 lg:py-32">
+      <div class="wrap grid gap-12 lg:grid-cols-[1fr_1.6fr]">
+        <div><p class="eyebrow">04 — FAQ</p><h2 class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">Common questions</h2></div>
+        <div>
+          <div class="faq-item" data-open="false">
+            <button type="button" class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-lg font-semibold sm:text-xl" aria-expanded="false"><span>What is an AI agent?</span><i data-lucide="plus" class="h-6 w-6"></i></button>
+            <div class="faq-answer hidden pb-6 pr-10 leading-7 text-muted"><div>An AI agent is software that uses a model plus defined tools and context to complete a bounded task or workflow.</div></div>
+          </div>
+          <div class="faq-item" data-open="false">
+            <button type="button" class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-lg font-semibold sm:text-xl" aria-expanded="false"><span>Can AI automate repetitive business tasks?</span><i data-lucide="plus" class="h-6 w-6"></i></button>
+            <div class="faq-answer hidden pb-6 pr-10 leading-7 text-muted"><div>Often yes, especially when the task is well-defined and the required information and tools are available.</div></div>
+          </div>
+          <div class="faq-item" data-open="false">
+            <button type="button" class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-lg font-semibold sm:text-xl" aria-expanded="false"><span>Can AI connect to existing systems?</span><i data-lucide="plus" class="h-6 w-6"></i></button>
+            <div class="faq-answer hidden pb-6 pr-10 leading-7 text-muted"><div>Yes, where suitable APIs or integrations exist. The integration approach depends on the systems involved.</div></div>
+          </div>
+          <div class="faq-item" data-open="false">
+            <button type="button" class="flex w-full items-center justify-between gap-6 py-6 text-left font-display text-lg font-semibold sm:text-xl" aria-expanded="false"><span>Should every workflow use an agent?</span><i data-lucide="plus" class="h-6 w-6"></i></button>
+            <div class="faq-answer hidden pb-6 pr-10 leading-7 text-muted"><div>No. Simple automation is often better for deterministic tasks. Agentic AI is useful when reasoning or flexible language handling adds value.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta py-20 lg:py-28">
+      <div class="wrap flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+        <div class="max-w-4xl">
+          <p class="eyebrow">Start a project</p>
+          <h2 class="display mt-5 text-5xl sm:text-6xl lg:text-8xl">Have something useful to build?</h2>
+          <p class="mt-6 max-w-2xl text-lg">Tell me what you are trying to achieve. I’ll help define the right digital approach.</p>
+        </div>
+        <a href="contact.html" class="btn !px-8 !py-5 !text-base">Let's Talk <i data-lucide="arrow-up-right" class="h-5 w-5"></i></a>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer on-ink overflow-hidden">
+    <div class="wrap pt-16 lg:pt-20">
+      <div class="grid gap-12 lg:grid-cols-[1.3fr_2fr]">
+        <div>
+          <a href="index.html" class="font-display text-2xl font-bold tracking-tight">YASIR MASOOD<span class="text-accent">.</span></a>
+          <p class="mt-4 max-w-sm leading-relaxed text-[#b2aea2]">Digital products, software architectures, and AI systems tailored for scalable growth.</p>
+          <a href="mailto:yasirkh261@gmail.com" class="mt-6 inline-flex items-center gap-2 border-b-[1.5px] border-accent pb-1 font-display text-lg font-semibold">yasirkh261@gmail.com <i data-lucide="arrow-up-right" class="h-5 w-5"></i></a>
+        </div>
+        <div class="grid gap-10 sm:grid-cols-3">
+        <div>
+          <h2 class="mono text-xs font-medium uppercase tracking-[.14em] text-[#b2aea2]">Capabilities</h2>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="web-development.html">Web Development</a></li>
+            <li><a href="app-development.html">App Development</a></li>
+            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+            <li><a href="agentic-ai.html">Agentic AI</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mono text-xs font-medium uppercase tracking-[.14em] text-[#b2aea2]">Company</h2>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="gallery.html">Work Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mono text-xs font-medium uppercase tracking-[.14em] text-[#b2aea2]">Connect</h2>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="mailto:yasirkh261@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/yasir-masood-bbb873240/">LinkedIn</a></li>
+            <li><a href="https://github.com">GitHub</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <div class="mt-14 flex flex-col items-start justify-between gap-2 border-t border-white/15 pt-6 text-xs text-[#b2aea2] sm:flex-row sm:items-center">
+        <p>&copy; <span data-year>2026</span> Yasir Masood. All rights reserved.</p>
+        <p>Built with modern web standards.</p>
+      </div>
+    </div>
+    <div class="wordmark mt-6 px-4 pb-6 text-center" aria-hidden="true">YASIR MASOOD</div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

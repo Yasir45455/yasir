@@ -1,235 +1,203 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Process & Workflow â€” Yasir Masood</title>
+  <title>Process & Workflow — Yasir Masood</title>
   <meta name="description" content="A structured, transparent workflow for designing, building, and scaling digital products.">
   <link rel="canonical" href="https://yourdomain.com/process.html">
-  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Process & Workflow — Yasir Masood">
+  <meta property="og:description" content="A structured, transparent workflow for designing, building, and scaling digital products.">
+  <meta property="og:url" content="https://yourdomain.com/process.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#42c775">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              50: '#f0f4ff',
-              100: '#e0e9fe',
-              600: '#0284c7',
-              700: '#0369a1',
-              navy: '#021B59',
-              navyHover: '#011340',
-            }
-          }
-        }
-      }
-    }
-  </script>
-  
+  <script src="js/tailwind-config.js"></script>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
   <link rel="stylesheet" href="css/custom.css">
-  
-  <style>
-    .bg-gradient-mesh {
-      background-image: 
-        radial-gradient(at 10% 10%, rgba(2, 27, 89, 0.08) 0px, transparent 50%),
-        radial-gradient(at 90% 20%, rgba(224, 233, 254, 0.5) 0px, transparent 50%),
-        radial-gradient(at 50% 80%, rgba(238, 242, 255, 0.6) 0px, transparent 50%);
-    }
-  </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-navy selection:text-white">
+<body class="bg-bg font-sans text-fg antialiased">
 
-  <header data-navbar class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-white/85 backdrop-blur-md">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Primary navigation">
-      <a href="index.html" class="flex items-center gap-2.5 font-bold tracking-tight text-brand-navy" aria-label="Home">
-        <span class="flex h-8 w-8 items-center justify-center rounded-md bg-brand-navy text-xs font-semibold text-white shadow-sm">YM</span>
-        <span class="text-base">YASIR MASOOD<span class="text-brand-600">.</span></span>
-      </a>
-      
-      <div class="hidden items-center gap-8 lg:flex text-sm font-medium text-slate-600">
-        <a href="index.html" class="hover:text-brand-navy transition-colors">Home</a>
-        <button data-mega-toggle aria-expanded="false" aria-controls="services-mega" class="flex items-center gap-1.5 hover:text-brand-navy transition-colors">
-          Services <i data-lucide="chevron-down" class="h-4 w-4 text-slate-400"></i>
-        </button>
-        <a href="gallery.html" class="hover:text-brand-navy transition-colors">Work Gallery</a>
-        
-        <a href="about.html" class="hover:text-brand-navy transition-colors">About</a>
-        <a href="process.html" class="text-brand-navy font-semibold">Process</a>
-      </div>
-      
-      <div class="hidden lg:block">
-        <a href="contact.html" class="inline-flex items-center justify-center rounded-lg bg-brand-navy px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-navyHover transition-all">
-          Let's Talk
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header data-navbar class="site-header">
+    <div class="wrap">
+      <nav class="nav-pill" aria-label="Primary">
+        <a href="index.html" class="flex items-center gap-2.5 font-display font-bold tracking-tight" aria-label="Yasir Masood — Home">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border-[1.5px] border-fg bg-accent text-xs font-bold text-ink" aria-hidden="true">YM</span>
+          <span class="hidden text-base sm:inline">YASIR MASOOD.</span>
         </a>
+
+        <div class="hidden items-center gap-1 lg:flex">
+          <a href="index.html" class="nav-link">Home</a>
+          <div data-dropdown>
+            <button type="button" data-dropdown-toggle class="nav-link" aria-expanded="false" aria-controls="services-mega">Services <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+            <div id="services-mega" data-dropdown-panel data-open="false" class="dropdown-panel dropdown-panel--mega">
+              <div class="grid grid-cols-4 gap-1 p-3">
+          <a href="web-development.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="code-2" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">Web Development</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">Websites, SaaS platforms & dashboards</span></span>
+          </a>
+          <a href="app-development.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="smartphone" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">App Development</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">High-performance mobile applications</span></span>
+          </a>
+          <a href="digital-marketing.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="trending-up" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">Digital Growth</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">Marketing and SEO strategies</span></span>
+          </a>
+          <a href="agentic-ai.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="bot" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">Agentic AI</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">Autonomous workflows & custom agents</span></span>
+          </a>
+              </div>
+              <div class="flex items-center justify-between rounded-b-[1.4rem] border-t-[1.5px] border-fg bg-subtle px-6 py-3 text-xs">
+                <span class="text-muted">Structured solutions tailored for scalable enterprise growth.</span>
+                <a href="services.html" class="link-arrow">View all capabilities &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <a href="gallery.html" class="nav-link">Work Gallery</a>
+          <div data-dropdown class="relative">
+            <button type="button" data-dropdown-toggle class="nav-link" aria-expanded="false" aria-controls="about-menu">About <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+            <div id="about-menu" data-dropdown-panel data-open="false" class="dropdown-panel dropdown-panel--menu">
+            <a href="about.html" class="dropdown-item"><span class="icon-chip"><i data-lucide="user-round" class="h-4 w-4"></i></span><span><strong class="block text-sm">About Me</strong><small class="text-muted">Background and approach</small></span></a>
+            <a href="skills.html" class="dropdown-item"><span class="icon-chip"><i data-lucide="badge-check" class="h-4 w-4"></i></span><span><strong class="block text-sm">Skills</strong><small class="text-muted">Tools and capabilities</small></span></a>
+            <a href="experience.html" class="dropdown-item"><span class="icon-chip"><i data-lucide="briefcase-business" class="h-4 w-4"></i></span><span><strong class="block text-sm">Experience</strong><small class="text-muted">Roles and milestones</small></span></a>
+            </div>
+          </div>
+          <a href="process.html" class="nav-link" aria-current="page">Process</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button type="button" data-theme-toggle class="icon-btn" aria-label="Toggle dark mode" aria-pressed="false">
+            <i data-lucide="moon" class="icon-moon h-[18px] w-[18px]"></i><i data-lucide="sun" class="icon-sun h-[18px] w-[18px]"></i>
+          </button>
+          <a href="contact.html" class="btn btn-accent btn-sm !hidden lg:!inline-flex">Let's Talk <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+          <button type="button" data-mobile-toggle class="icon-btn lg:!hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <i data-lucide="menu" data-icon-open class="h-5 w-5"></i><i data-lucide="x" data-icon-close class="hidden h-5 w-5"></i>
+          </button>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" data-mobile-menu class="mobile-menu hidden max-h-[calc(100vh-6rem)] overflow-y-auto p-4 lg:hidden">
+        <div class="space-y-1 font-display text-lg font-semibold">
+          <a class="block rounded-lg px-3 py-2.5 hover:bg-accent hover:text-ink" href="index.html">Home</a>
+          <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="m-services" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left">Services <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div id="m-services" class="hidden border-l-[1.5px] border-fg pl-3 font-sans text-base font-normal"><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="web-development.html">Web Development</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="app-development.html">App Development</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="digital-marketing.html">Digital Marketing</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="agentic-ai.html">Agentic AI</a></div>
+          <a class="block rounded-lg px-3 py-2.5 hover:bg-accent hover:text-ink" href="gallery.html">Work Gallery</a>
+          <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="m-about" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left">About <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div id="m-about" class="hidden border-l-[1.5px] border-fg pl-3 font-sans text-base font-normal"><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="about.html">About Me</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="skills.html">Skills</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="experience.html">Experience</a></div>
+          <a class="block rounded-lg px-3 py-2.5 hover:bg-accent hover:text-ink" href="process.html">Process</a>
+          <a class="btn btn-accent mt-3 w-full" href="contact.html">Contact</a>
+        </div>
       </div>
-      
-      <button data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu" class="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-slate-100 lg:hidden" aria-label="Open menu">
-        <i data-lucide="menu" class="h-5 w-5"></i>
-      </button>
-    </nav>
+    </div>
   </header>
 
-  <section class="relative pt-36 pb-16 lg:pt-40 lg:pb-20 bg-gradient-mesh border-b border-slate-200/80">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <p class="text-xs font-semibold uppercase tracking-widest text-brand-navy">Execution Methodology</p>
-        <h1 class="mt-2 text-4xl font-bold tracking-tight text-brand-navy sm:text-5xl">
-          A structured approach to building digital products.
-        </h1>
-        <p class="mt-6 text-lg text-slate-600 leading-relaxed">
-          From initial discovery to post-launch scaling, every stage of the development process is designed to minimize risk, maximize velocity, and ensure long-term business value.
-        </p>
+  <main id="main">
+    <section class="page-hero isolate pt-32 pb-16 lg:pt-44 lg:pb-24">
+      <div class="dots absolute inset-0 -z-10 opacity-70 [mask-image:linear-gradient(to_bottom,#000,transparent_85%)]" aria-hidden="true"></div>
+      <span class="big-index" aria-hidden="true">04</span>
+      <div class="wrap grid items-center gap-12 ">
+        <div class="max-w-4xl">
+          <nav aria-label="Breadcrumb" class="mono text-xs uppercase tracking-[.14em] text-muted"><a href="index.html" class="hover:underline">Home</a> <span aria-hidden="true">/</span> <span class="text-fg" aria-current="page">Process</span></nav>
+          <p class="eyebrow mt-8">Execution Methodology</p>
+          <h1 class="display mt-5 text-5xl sm:text-6xl lg:text-7xl">A structured approach to building digital products.</h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-muted sm:text-xl">From initial discovery to post-launch scaling, every stage of the development process is designed to minimize risk, maximize velocity, and ensure long-term business value.</p>
+          
+        </div>
+        
       </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-slate-50">
-    <div class="mx-auto max-w-5xl px-6 lg:px-8">
-      <div class="relative border-l-2 border-brand-100 ml-4 md:ml-32 space-y-12">
-
-        <div class="relative pl-8 md:pl-12 group">
-          <div class="absolute -left-[17px] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-brand-navy text-xs font-bold text-white shadow-md ring-4 ring-slate-50">
-            01
-          </div>
-          <span class="hidden md:block absolute -left-32 top-1.5 w-24 text-right text-xs font-bold uppercase tracking-wider text-brand-navy">
-            Phase 01
-          </span>
-          <div class="rounded-2xl border border-slate-200/80 bg-white p-6 md:p-8 shadow-sm hover:shadow-md transition-all">
-            <div class="flex items-center gap-3 text-brand-navy mb-3">
-              <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-50 border border-brand-100">
-                <i data-lucide="search" class="h-5 w-5"></i>
-              </div>
-              <h3 class="text-xl font-bold">Discovery & Strategy</h3>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              We align on business goals, technical requirements, target user profiles, and key project milestones. This establishes a risk-free roadmap before writing a single line of code.
-            </p>
-            <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-xs font-medium text-slate-500">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Requirements Gathering</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Technical Architecture Outline</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Timeline & Budget Alignment</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Scope & KPI Definition</li>
-            </ul>
-          </div>
+    </section>
+    <section class="py-20 lg:py-28"><div class="wrap"><ol class="border-b-[1.5px] border-fg">
+        <li class="process-step grid gap-8 border-t-[1.5px] border-fg py-12 lg:grid-cols-[14rem_1fr_1fr] lg:gap-12" data-reveal>
+          <div><span class="stat-num block text-8xl text-fg/20">01</span><p class="mono mt-2 text-xs uppercase tracking-[.14em] text-muted">Phase 01</p></div>
+          <div><span class="icon-chip"><i data-lucide="search" class="h-5 w-5"></i></span><h2 class="display mt-5 text-3xl sm:text-4xl">Discovery & Strategy</h2><p class="mt-4 leading-7 text-muted">We align on business goals, technical requirements, target user profiles, and key project milestones. This establishes a risk-free roadmap before writing a single line of code.</p></div>
+          <ul class="card self-start p-6 space-y-3" aria-label="Discovery & Strategy deliverables"><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Requirements Gathering</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Technical Architecture Outline</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Timeline & Budget Alignment</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Scope & KPI Definition</li></ul>
+        </li>
+        <li class="process-step grid gap-8 border-t-[1.5px] border-fg py-12 lg:grid-cols-[14rem_1fr_1fr] lg:gap-12" data-reveal>
+          <div><span class="stat-num block text-8xl text-fg/20">02</span><p class="mono mt-2 text-xs uppercase tracking-[.14em] text-muted">Phase 02</p></div>
+          <div><span class="icon-chip"><i data-lucide="pen-tool" class="h-5 w-5"></i></span><h2 class="display mt-5 text-3xl sm:text-4xl">Architecture & UI/UX Design</h2><p class="mt-4 leading-7 text-muted">Transforming complex technical ideas into intuitive user flows and responsive interfaces. Interactive prototypes allow testing and validating workflows prior to development.</p></div>
+          <ul class="card self-start p-6 space-y-3" aria-label="Architecture & UI/UX Design deliverables"><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Wireframing & Prototyping</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>System Schema Design</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Design System Creation</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Client Feedback Loops</li></ul>
+        </li>
+        <li class="process-step grid gap-8 border-t-[1.5px] border-fg py-12 lg:grid-cols-[14rem_1fr_1fr] lg:gap-12" data-reveal>
+          <div><span class="stat-num block text-8xl text-fg/20">03</span><p class="mono mt-2 text-xs uppercase tracking-[.14em] text-muted">Phase 03</p></div>
+          <div><span class="icon-chip"><i data-lucide="code" class="h-5 w-5"></i></span><h2 class="display mt-5 text-3xl sm:text-4xl">Agile Engineering</h2><p class="mt-4 leading-7 text-muted">Clean, modular, and maintainable code built with enterprise-ready tech stacks. Sprint-based updates keep development transparent and flexible to changes.</p></div>
+          <ul class="card self-start p-6 space-y-3" aria-label="Agile Engineering deliverables"><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Full-Stack Implementation</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>API Integrations & AI Agents</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Bi-weekly Demo Reviews</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Performance Optimization</li></ul>
+        </li>
+        <li class="process-step grid gap-8 border-t-[1.5px] border-fg py-12 lg:grid-cols-[14rem_1fr_1fr] lg:gap-12" data-reveal>
+          <div><span class="stat-num block text-8xl text-fg/20">04</span><p class="mono mt-2 text-xs uppercase tracking-[.14em] text-muted">Phase 04</p></div>
+          <div><span class="icon-chip"><i data-lucide="rocket" class="h-5 w-5"></i></span><h2 class="display mt-5 text-3xl sm:text-4xl">Quality Assurance & Deployment</h2><p class="mt-4 leading-7 text-muted">Rigorously testing security, cross-device compatibility, and performance metrics before launching seamlessly into production environments.</p></div>
+          <ul class="card self-start p-6 space-y-3" aria-label="Quality Assurance & Deployment deliverables"><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>End-to-End Testing</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Security Audits</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>CI/CD Pipeline Setup</li><li class="flex items-center gap-2.5 text-sm font-medium"><i data-lucide="check-circle-2" class="h-4 w-4 shrink-0" aria-hidden="true"></i>Zero-Downtime Launch</li></ul>
+        </li>
+    </ol></div></section>
+    <section class="cta py-20 lg:py-28">
+      <div class="wrap flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+        <div class="max-w-4xl">
+          <p class="eyebrow">Get Started</p>
+          <h2 class="display mt-5 text-5xl sm:text-6xl lg:text-8xl">Have a project in mind?</h2>
+          <p class="mt-6 max-w-2xl text-lg">Let's connect and walk through Phase 01 for your product.</p>
         </div>
-
-        <div class="relative pl-8 md:pl-12 group">
-          <div class="absolute -left-[17px] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-brand-navy text-xs font-bold text-white shadow-md ring-4 ring-slate-50">
-            02
-          </div>
-          <span class="hidden md:block absolute -left-32 top-1.5 w-24 text-right text-xs font-bold uppercase tracking-wider text-brand-navy">
-            Phase 02
-          </span>
-          <div class="rounded-2xl border border-slate-200/80 bg-white p-6 md:p-8 shadow-sm hover:shadow-md transition-all">
-            <div class="flex items-center gap-3 text-brand-navy mb-3">
-              <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-50 border border-brand-100">
-                <i data-lucide="pen-tool" class="h-5 w-5"></i>
-              </div>
-              <h3 class="text-xl font-bold">Architecture & UI/UX Design</h3>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Transforming complex technical ideas into intuitive user flows and responsive interfaces. Interactive prototypes allow testing and validating workflows prior to development.
-            </p>
-            <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-xs font-medium text-slate-500">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Wireframing & Prototyping</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> System Schema Design</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Design System Creation</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Client Feedback Loops</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="relative pl-8 md:pl-12 group">
-          <div class="absolute -left-[17px] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-brand-navy text-xs font-bold text-white shadow-md ring-4 ring-slate-50">
-            03
-          </div>
-          <span class="hidden md:block absolute -left-32 top-1.5 w-24 text-right text-xs font-bold uppercase tracking-wider text-brand-navy">
-            Phase 03
-          </span>
-          <div class="rounded-2xl border border-slate-200/80 bg-white p-6 md:p-8 shadow-sm hover:shadow-md transition-all">
-            <div class="flex items-center gap-3 text-brand-navy mb-3">
-              <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-50 border border-brand-100">
-                <i data-lucide="code" class="h-5 w-5"></i>
-              </div>
-              <h3 class="text-xl font-bold">Agile Engineering</h3>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Clean, modular, and maintainable code built with enterprise-ready tech stacks. Sprint-based updates keep development transparent and flexible to changes.
-            </p>
-            <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-xs font-medium text-slate-500">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Full-Stack Implementation</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> API Integrations & AI Agents</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Bi-weekly Demo Reviews</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Performance Optimization</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="relative pl-8 md:pl-12 group">
-          <div class="absolute -left-[17px] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-brand-navy text-xs font-bold text-white shadow-md ring-4 ring-slate-50">
-            04
-          </div>
-          <span class="hidden md:block absolute -left-32 top-1.5 w-24 text-right text-xs font-bold uppercase tracking-wider text-brand-navy">
-            Phase 04
-          </span>
-          <div class="rounded-2xl border border-slate-200/80 bg-white p-6 md:p-8 shadow-sm hover:shadow-md transition-all">
-            <div class="flex items-center gap-3 text-brand-navy mb-3">
-              <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-50 border border-brand-100">
-                <i data-lucide="rocket" class="h-5 w-5"></i>
-              </div>
-              <h3 class="text-xl font-bold">Quality Assurance & Deployment</h3>
-            </div>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Rigorously testing security, cross-device compatibility, and performance metrics before launching seamlessly into production environments.
-            </p>
-            <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-xs font-medium text-slate-500">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> End-to-End Testing</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Security Audits</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> CI/CD Pipeline Setup</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="h-4 w-4 text-brand-600"></i> Zero-Downtime Launch</li>
-            </ul>
-          </div>
-        </div>
-
+        <a href="contact.html" class="btn !px-8 !py-5 !text-base">Start Discovery Phase <i data-lucide="arrow-up-right" class="h-5 w-5"></i></a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="bg-brand-navy py-16 text-white relative overflow-hidden">
-    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+  <footer class="site-footer on-ink overflow-hidden">
+    <div class="wrap pt-16 lg:pt-20">
+      <div class="grid gap-12 lg:grid-cols-[1.3fr_2fr]">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-brand-100">Get Started</p>
-          <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Have a project in mind?</h2>
-          <p class="mt-2 text-brand-100/80 max-w-2xl">Let's connect and walk through Phase 01 for your product.</p>
+          <a href="index.html" class="font-display text-2xl font-bold tracking-tight">YASIR MASOOD<span class="text-accent">.</span></a>
+          <p class="mt-4 max-w-sm leading-relaxed text-[#b2aea2]">Digital products, software architectures, and AI systems tailored for scalable growth.</p>
+          <a href="mailto:yasirkh261@gmail.com" class="mt-6 inline-flex items-center gap-2 border-b-[1.5px] border-accent pb-1 font-display text-lg font-semibold">yasirkh261@gmail.com <i data-lucide="arrow-up-right" class="h-5 w-5"></i></a>
         </div>
-        <a href="contact.html" class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-brand-navy shadow-md hover:bg-slate-100 transition-all">
-          Start Discovery Phase
-        </a>
+        <div class="grid gap-10 sm:grid-cols-3">
+        <div>
+          <h2 class="mono text-xs font-medium uppercase tracking-[.14em] text-[#b2aea2]">Capabilities</h2>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="web-development.html">Web Development</a></li>
+            <li><a href="app-development.html">App Development</a></li>
+            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+            <li><a href="agentic-ai.html">Agentic AI</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mono text-xs font-medium uppercase tracking-[.14em] text-[#b2aea2]">Company</h2>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="gallery.html">Work Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mono text-xs font-medium uppercase tracking-[.14em] text-[#b2aea2]">Connect</h2>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="mailto:yasirkh261@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/yasir-masood-bbb873240/">LinkedIn</a></li>
+            <li><a href="https://github.com">GitHub</a></li>
+          </ul>
+        </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <footer class="border-t border-slate-200 bg-white text-slate-600 text-sm">
-    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
-        <p>Â© <span data-year>2026</span> Yasir Masood. All rights reserved.</p>
+      <div class="mt-14 flex flex-col items-start justify-between gap-2 border-t border-white/15 pt-6 text-xs text-[#b2aea2] sm:flex-row sm:items-center">
+        <p>&copy; <span data-year>2026</span> Yasir Masood. All rights reserved.</p>
         <p>Built with modern web standards.</p>
       </div>
     </div>
+    <div class="wordmark mt-6 px-4 pb-6 text-center" aria-hidden="true">YASIR MASOOD</div>
   </footer>
 
   <script src="js/main.js" defer></script>
 </body>
-</html>
 
+</html>

@@ -1,351 +1,348 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Yasir Masood â€” Digital Products, Growth & AI</title>
-  <meta name="description"
-    content="Business-first web development, app development, digital marketing and agentic AI solutions for modern companies.">
+  <title>Yasir Masood — Digital Products, Growth & AI</title>
+  <meta name="description" content="Business-first web development, app development, digital marketing and agentic AI solutions for modern companies.">
   <link rel="canonical" href="https://yourdomain.com/">
-
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Yasir Masood â€” Digital Products, Growth & AI">
-  <meta property="og:description"
-    content="Business-first web development, app development, digital marketing and agentic AI solutions for modern companies.">
+  <meta property="og:title" content="Yasir Masood — Digital Products, Growth & AI">
+  <meta property="og:description" content="Business-first web development, app development, digital marketing and agentic AI solutions for modern companies.">
   <meta property="og:url" content="https://yourdomain.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#42c775">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
-          colors: {
-            brand: { DEFAULT: '#021B59', 50: '#f0f4ff', 100: '#e0e9fe', 600: '#0284c7', 700: '#0369a1', navy: '#021B59', navyHover: '#011340' },
-            ink: '#021B59', mist: '#FFFFFF'
-          }
-        }
-      }
-    };
-  </script>
-
+  <script src="js/tailwind-config.js"></script>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
   <link rel="stylesheet" href="css/custom.css">
-
-  <style>
-    /* Subtle background mesh gradients tuned for #021B59 tones */
-    .bg-gradient-mesh {
-      background-image:
-        radial-gradient(at 10% 10%, rgba(2, 27, 89, 0.08) 0px, transparent 50%),
-        radial-gradient(at 90% 20%, rgba(224, 233, 254, 0.5) 0px, transparent 50%),
-        radial-gradient(at 50% 80%, rgba(238, 242, 255, 0.6) 0px, transparent 50%);
-    }
-  </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-navy selection:text-white">
+<body class="bg-bg font-sans text-fg antialiased">
 
-  <header data-navbar class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-white/85 backdrop-blur-md">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8" aria-label="Primary navigation">
-      <a href="index.html" class="flex items-center gap-2.5 font-bold tracking-tight text-brand-navy"
-        aria-label="Home"><span
-          class="flex h-8 w-8 items-center justify-center rounded-md bg-brand-navy text-xs font-semibold text-white shadow-sm">YM</span><span
-          class="text-base">YASIR MASOOD<span class="text-brand-600">.</span></span></a>
-      <div class="hidden items-center gap-8 text-sm font-medium text-slate-600 lg:flex">
-        <a href="index.html" class="text-brand-navy font-semibold">Home</a>
-        <button data-mega-toggle aria-expanded="false" aria-controls="services-mega"
-          class="flex items-center gap-1.5 hover:text-brand-navy transition-colors">Services <i
-            data-lucide="chevron-down" class="h-4 w-4 text-slate-400"></i></button>
-        <a href="gallery.html" class="hover:text-brand-navy transition-colors">Work Gallery</a>
-
-        <div class="relative">
-          <button data-about-toggle aria-expanded="false" aria-controls="about-menu"
-            class="flex items-center gap-1.5 hover:text-brand-navy transition-colors">About <i
-              data-lucide="chevron-down" class="h-4 w-4 text-slate-400"></i></button>
-          <div id="about-menu" data-about-menu data-open="false" class="about-panel absolute top-[34px] z-50 p-1.5">
-            <a href="about.html"><i data-lucide="user-round" class="h-4 w-4"></i><span><strong
-                  class="block text-sm">About Me</strong><small class="text-slate-500">Background and
-                  approach</small></span></a>
-            <a href="skills.html"><i data-lucide="badge-check" class="h-4 w-4"></i><span><strong
-                  class="block text-sm">Skills</strong><small class="text-slate-500">Tools and
-                  capabilities</small></span></a>
-            <a href="experience.html"><i data-lucide="briefcase-business" class="h-4 w-4"></i><span><strong
-                  class="block text-sm">Experience</strong><small class="text-slate-500">Roles and
-                  milestones</small></span></a>
-          </div>
-        </div>
-        <a href="process.html" class="hover:text-brand-navy transition-colors">Process</a>
-      </div>
-      <div class="hidden lg:block"><a href="contact.html"
-          class="inline-flex items-center justify-center rounded-lg bg-brand-navy px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-navyHover">Let's
-          Talk</a></div>
-      <button data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu"
-        class="rounded-lg border border-slate-200 p-2 text-slate-600 hover:bg-slate-100 lg:hidden"
-        aria-label="Open menu"><i data-lucide="menu" class="h-5 w-5"></i></button>
-    </nav>
-    <div id="services-mega" data-mega data-open="false"
-      class="mega-panel absolute left-1/2 top-[72px] hidden w-[min(1020px,calc(100%-40px))] -translate-x-1/2 border border-slate-200/80 bg-white/95 shadow-xl shadow-brand-navy/5 backdrop-blur-xl lg:block">
-      <div class="grid grid-cols-2 divide-x divide-y divide-slate-100 p-2 md:grid-cols-4 md:divide-y-0">
-        <a href="web-development.html" class="group rounded-lg p-5 transition-all hover:bg-brand-50/50">
-          <div
-            class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-brand-navy shadow-sm transition-all group-hover:border-brand-navy group-hover:bg-brand-navy group-hover:text-white">
-            <i data-lucide="code-2" class="h-5 w-5"></i></div>
-          <h3 class="text-sm font-semibold text-brand-navy">Web Development</h3>
-          <p class="mt-1 text-xs leading-relaxed text-slate-500">Websites, SaaS platforms & dashboards</p>
-        </a><a href="app-development.html" class="group rounded-lg p-5 transition-all hover:bg-brand-50/50">
-          <div
-            class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-brand-navy shadow-sm transition-all group-hover:border-brand-navy group-hover:bg-brand-navy group-hover:text-white">
-            <i data-lucide="smartphone" class="h-5 w-5"></i></div>
-          <h3 class="text-sm font-semibold text-brand-navy">App Development</h3>
-          <p class="mt-1 text-xs leading-relaxed text-slate-500">High-performance mobile applications</p>
-        </a><a href="digital-marketing.html" class="group rounded-lg p-5 transition-all hover:bg-brand-50/50">
-          <div
-            class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-brand-navy shadow-sm transition-all group-hover:border-brand-navy group-hover:bg-brand-navy group-hover:text-white">
-            <i data-lucide="trending-up" class="h-5 w-5"></i></div>
-          <h3 class="text-sm font-semibold text-brand-navy">Digital Growth</h3>
-          <p class="mt-1 text-xs leading-relaxed text-slate-500">Marketing and SEO strategies</p>
-        </a><a href="agentic-ai.html" class="group rounded-lg p-5 transition-all hover:bg-brand-50/50">
-          <div
-            class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-brand-navy shadow-sm transition-all group-hover:border-brand-navy group-hover:bg-brand-navy group-hover:text-white">
-            <i data-lucide="bot" class="h-5 w-5"></i></div>
-          <h3 class="text-sm font-semibold text-brand-navy">Agentic AI</h3>
-          <p class="mt-1 text-xs leading-relaxed text-slate-500">Autonomous workflows & custom agents</p>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header data-navbar class="site-header">
+    <div class="wrap">
+      <nav class="nav-pill" aria-label="Primary">
+        <a href="index.html" class="flex items-center gap-2.5 font-display font-bold tracking-tight" aria-label="Yasir Masood — Home">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border-[1.5px] border-fg bg-accent text-xs font-bold text-ink" aria-hidden="true">YM</span>
+          <span class="hidden text-base sm:inline">YASIR MASOOD.</span>
         </a>
-      </div>
-      <div
-        class="flex items-center justify-between rounded-b-xl border-t border-slate-100 bg-slate-50/50 px-6 py-3 text-xs">
-        <span class="text-slate-500">Structured solutions tailored for scalable enterprise growth.</span><a
-          href="services.html" class="font-semibold text-brand-navy hover:text-brand-600">View all capabilities
-          &rarr;</a></div>
-    </div>
-    <div id="mobile-menu" data-mobile-menu class="hidden border-t border-slate-200 bg-white px-6 py-5 lg:hidden">
-      <div class="space-y-1 text-sm text-slate-700">
-        <a class="block py-2 font-medium" href="index.html">Home</a>
-        <button data-mobile-services-toggle aria-expanded="false"
-          class="flex w-full items-center justify-between py-2 font-medium">Services <i data-lucide="chevron-down"
-            class="h-4 w-4"></i></button>
-        <div data-mobile-services class="hidden border-l border-slate-200 pl-4 text-slate-600"><a class="block py-2"
-            href="web-development.html">Web Development</a><a class="block py-2" href="app-development.html">App
-            Development</a><a class="block py-2" href="digital-marketing.html">Digital Marketing</a><a
-            class="block py-2" href="agentic-ai.html">Agentic AI</a></div>
-        <a class="block py-2 font-medium" href="gallery.html">Work Gallery</a>
-        <button data-mobile-about-toggle aria-expanded="false"
-          class="flex w-full items-center justify-between py-2 font-medium">About <i data-lucide="chevron-down"
-            class="h-4 w-4"></i></button>
-        <div data-mobile-about class="hidden border-l border-slate-200 pl-4 text-slate-600"><a class="block py-2"
-            href="about.html">About Me</a><a class="block py-2" href="skills.html">Skills</a><a class="block py-2"
-            href="experience.html">Experience</a></div>
-        <a class="block py-2 font-medium" href="process.html">Process</a><a class="block py-2 font-medium"
-          href="contact.html">Contact</a>
+
+        <div class="hidden items-center gap-1 lg:flex">
+          <a href="index.html" class="nav-link" aria-current="page">Home</a>
+          <div data-dropdown>
+            <button type="button" data-dropdown-toggle class="nav-link" aria-expanded="false" aria-controls="services-mega">Services <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+            <div id="services-mega" data-dropdown-panel data-open="false" class="dropdown-panel dropdown-panel--mega">
+              <div class="grid grid-cols-4 gap-1 p-3">
+          <a href="web-development.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="code-2" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">Web Development</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">Websites, SaaS platforms & dashboards</span></span>
+          </a>
+          <a href="app-development.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="smartphone" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">App Development</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">High-performance mobile applications</span></span>
+          </a>
+          <a href="digital-marketing.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="trending-up" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">Digital Growth</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">Marketing and SEO strategies</span></span>
+          </a>
+          <a href="agentic-ai.html" class="group flex gap-3 rounded-2xl p-4 transition-colors hover:bg-accent hover:text-ink">
+            <span class="icon-chip"><i data-lucide="bot" class="h-5 w-5"></i></span>
+            <span><span class="block font-display text-sm font-bold">Agentic AI</span><span class="mt-0.5 block text-xs leading-relaxed text-muted group-hover:text-ink/80">Autonomous workflows & custom agents</span></span>
+          </a>
+              </div>
+              <div class="flex items-center justify-between rounded-b-[1.4rem] border-t-[1.5px] border-fg bg-subtle px-6 py-3 text-xs">
+                <span class="text-muted">Structured solutions tailored for scalable enterprise growth.</span>
+                <a href="services.html" class="link-arrow">View all capabilities &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <a href="gallery.html" class="nav-link">Work Gallery</a>
+          <div data-dropdown class="relative">
+            <button type="button" data-dropdown-toggle class="nav-link" aria-expanded="false" aria-controls="about-menu">About <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+            <div id="about-menu" data-dropdown-panel data-open="false" class="dropdown-panel dropdown-panel--menu">
+            <a href="about.html" class="dropdown-item"><span class="icon-chip"><i data-lucide="user-round" class="h-4 w-4"></i></span><span><strong class="block text-sm">About Me</strong><small class="text-muted">Background and approach</small></span></a>
+            <a href="skills.html" class="dropdown-item"><span class="icon-chip"><i data-lucide="badge-check" class="h-4 w-4"></i></span><span><strong class="block text-sm">Skills</strong><small class="text-muted">Tools and capabilities</small></span></a>
+            <a href="experience.html" class="dropdown-item"><span class="icon-chip"><i data-lucide="briefcase-business" class="h-4 w-4"></i></span><span><strong class="block text-sm">Experience</strong><small class="text-muted">Roles and milestones</small></span></a>
+            </div>
+          </div>
+          <a href="process.html" class="nav-link">Process</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button type="button" data-theme-toggle class="icon-btn" aria-label="Toggle dark mode" aria-pressed="false">
+            <i data-lucide="moon" class="icon-moon h-[18px] w-[18px]"></i><i data-lucide="sun" class="icon-sun h-[18px] w-[18px]"></i>
+          </button>
+          <a href="contact.html" class="btn btn-accent btn-sm !hidden lg:!inline-flex">Let's Talk <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+          <button type="button" data-mobile-toggle class="icon-btn lg:!hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <i data-lucide="menu" data-icon-open class="h-5 w-5"></i><i data-lucide="x" data-icon-close class="hidden h-5 w-5"></i>
+          </button>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" data-mobile-menu class="mobile-menu hidden max-h-[calc(100vh-6rem)] overflow-y-auto p-4 lg:hidden">
+        <div class="space-y-1 font-display text-lg font-semibold">
+          <a class="block rounded-lg px-3 py-2.5 hover:bg-accent hover:text-ink" href="index.html" aria-current="page">Home</a>
+          <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="m-services" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left">Services <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div id="m-services" class="hidden border-l-[1.5px] border-fg pl-3 font-sans text-base font-normal"><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="web-development.html">Web Development</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="app-development.html">App Development</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="digital-marketing.html">Digital Marketing</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="agentic-ai.html">Agentic AI</a></div>
+          <a class="block rounded-lg px-3 py-2.5 hover:bg-accent hover:text-ink" href="gallery.html">Work Gallery</a>
+          <button type="button" data-accordion-toggle aria-expanded="false" aria-controls="m-about" class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left">About <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div id="m-about" class="hidden border-l-[1.5px] border-fg pl-3 font-sans text-base font-normal"><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="about.html">About Me</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="skills.html">Skills</a><a class="block rounded-lg px-3 py-2 hover:bg-accent hover:text-ink" href="experience.html">Experience</a></div>
+          <a class="block rounded-lg px-3 py-2.5 hover:bg-accent hover:text-ink" href="process.html">Process</a>
+          <a class="btn btn-accent mt-3 w-full" href="contact.html">Contact</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <section class="pt-24 lg:pt-28 bg-white flex items-center justify-center  p-4 md:p-8">
-
-    <!-- White Hero Card Container -->
-    <div class=" p-4 bg-white rounded-2xl shadow-soft max-w-6xl w-full">
-
-      <!-- Row 1: Image and Headline Container (Matches aspect and center-justifies) -->
-      <div class="grid md:grid-cols-2 gap-10 items-center justify-items-center mb-10">
-
-        <!-- Left: Illustration Container (Fixed aspect ratio to keep height and width related) -->
-        <div class="aspect-[4/3] bg-[#EBF0FC] w-full max-w-[480px] rounded-2xl p-6 flex items-center justify-center">
-          <img src="assets/images/pf/one.png" alt="Yasir Masood" class="w-full h-full object-contain" />
-        </div>
-
-        <!-- Right: Headline and Badge -->
-        <div class="max-w-[480px]">
-          <!-- Badge -->
-          <div
-            class="inline-flex items-center gap-2 rounded-full border border-green-100 bg-green-50 px-3 py-1 text-xs font-medium text-green-700 mb-5">
-            <span class="w-2 h-2 rounded-full bg-green-500"></span>
-            Illustrative badge
+  <main id="main">
+    
+    <!-- Hero -->
+    <section class="relative isolate overflow-hidden pt-32 pb-20 lg:pt-44 lg:pb-28">
+      <div class="dots absolute inset-0 -z-10 [mask-image:linear-gradient(to_bottom,#000,transparent_90%)]" aria-hidden="true"></div>
+      <div class="wrap grid items-center gap-14 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <p class="chip chip-mono !gap-2 !py-1.5"><span class="h-2 w-2 rounded-full bg-accent ring-1 ring-fg" aria-hidden="true"></span>Illustrative badge</p>
+          <h1 class="display mt-8 text-[2.9rem] sm:text-7xl xl:text-[5.6rem]">I build <span class="mark">modern web apps</span> that look clean and work smoothly.</h1>
+          <p class="mt-8 max-w-xl text-lg leading-8 text-muted sm:text-xl">From responsive frontend to backend APIs and AI-powered tools, I create practical digital products for businesses, startups, and growing teams.</p>
+          <div class="mt-10 flex flex-wrap gap-3">
+            <a href="contact.html" class="btn btn-accent">Start a Project <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+            <a href="gallery.html" class="btn btn-ghost">View Work <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
           </div>
-
-          <!-- Main Headline (Justified and centered relative to image on large screens) -->
-          <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-brand-navy leading-[1.12]">
-            I build modern web apps that look clean and work smoothly.
-          </h1>
+        </div>
+        <div class="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
+          <figure class="hero-photo"><img src="assets/images/pf/one.png" alt="Yasir Masood" width="976" height="1075" class="aspect-[5/5.4] w-full object-cover" fetchpriority="high"></figure>
+          <span class="chip chip-mono float-chip -left-3 top-12 sm:-left-8" aria-hidden="true">React.js</span>
+          <span class="chip chip-mono float-chip -right-2 top-1/3 [animation-delay:-2s] sm:-right-6" aria-hidden="true">Node.js</span>
+          <span class="chip chip-mono float-chip -left-2 bottom-24 [animation-delay:-4s] sm:-left-8" aria-hidden="true">MongoDB</span>
+          <span class="chip chip-mono float-chip -right-1 -bottom-4 [animation-delay:-1s] sm:-right-5" aria-hidden="true">OpenAI</span>
+          <div class="sticker right-4 -top-10 hidden sm:flex" aria-hidden="true"><span class="stat-num text-3xl">20+</span><span class="mono mt-1 px-3 text-[9px] uppercase leading-tight tracking-wider">Projects Delivered</span></div>
         </div>
       </div>
+    </section>
 
-      <!-- Row 2: Paragraph (Same width as above container) -->
-      <div class="max-w-[640px] mx-auto text-center mb-10">
-        <p class="text-lg text-slate-600 leading-relaxed">
-          From responsive frontend to backend APIs and AI-powered tools, I create practical digital products for
-          businesses, startups, and growing teams.
-        </p>
-      </div>
-
-      <!-- Row 3: Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-4">
-        <a href="#"
-          class="inline-flex items-center justify-center rounded-xl bg-brand-navy px-7 py-3 text-base font-semibold text-white shadow-md hover:bg-brand-navyHover transition-colors gap-2">
-          Start a Project
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </a>
-        <a href="#"
-          class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-7 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 transition-colors shadow-sm">
-          View Work
-        </a>
-      </div>
-
+    <div class="marquee" role="region" aria-label="Technologies">
+      <div class="marquee-track"><span>Next.js</span><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>MySQL</span><span>OpenAI</span><span>Python FastAPI</span><span>React Native</span><span>Flutter</span><span>Tailwind CSS</span><span>Redux</span><span>Docker</span><span>Git & GitHub</span><span>REST APIs</span><span>Microservices</span><span aria-hidden="true">Next.js</span><span aria-hidden="true">React.js</span><span aria-hidden="true">Node.js</span><span aria-hidden="true">Express.js</span><span aria-hidden="true">MongoDB</span><span aria-hidden="true">MySQL</span><span aria-hidden="true">OpenAI</span><span aria-hidden="true">Python FastAPI</span><span aria-hidden="true">React Native</span><span aria-hidden="true">Flutter</span><span aria-hidden="true">Tailwind CSS</span><span aria-hidden="true">Redux</span><span aria-hidden="true">Docker</span><span aria-hidden="true">Git & GitHub</span><span aria-hidden="true">REST APIs</span><span aria-hidden="true">Microservices</span></div>
     </div>
 
-  </section>
+    <!-- Stats -->
+    <section aria-label="Highlights" class="border-b-[1.5px] border-fg">
+      <dl class="wrap grid grid-cols-2 lg:grid-cols-4">
+        <div class="border-b-[1.5px] border-r-[1.5px] border-fg py-10 pr-6 lg:border-b-0"><dd class="stat-num text-6xl sm:text-7xl">20+</dd><dt class="mono mt-3 text-xs uppercase tracking-[.14em] text-muted">Projects Delivered</dt></div>
+        <div class="border-b-[1.5px] border-fg py-10 pl-6 lg:border-b-0 lg:border-r-[1.5px]"><dd class="stat-num text-6xl sm:text-7xl">4</dd><dt class="mono mt-3 text-xs uppercase tracking-[.14em] text-muted">Core Capabilities</dt></div>
+        <div class="border-r-[1.5px] border-fg py-10 pr-6 lg:pl-6"><dd class="stat-num text-6xl sm:text-7xl">3+</dd><dt class="mono mt-3 text-xs uppercase tracking-[.14em] text-muted">Years Experience</dt></div>
+        <div class="py-10 pl-6"><dd class="stat-num text-6xl sm:text-7xl">Global</dd><dt class="mono mt-3 text-xs uppercase tracking-[.14em] text-muted">Client Base</dt></div>
+      </dl>
+    </section>
 
-  <section class="border-b border-slate-200 bg-brand-navy text-white py-12 relative">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="grid grid-cols-2 gap-8 sm:grid-cols-4 divide-y divide-white/10 sm:divide-y-0 sm:divide-x">
-        <div class="pt-4 sm:pt-0 sm:px-4 text-center">
-          <div class="text-3xl font-bold tracking-tight text-white">20+</div>
-          <div class="mt-1 text-xs font-medium uppercase tracking-wider text-brand-100">Projects Delivered</div>
+    <!-- Services -->
+    <section class="py-24 lg:py-32" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="eyebrow">01 — Services</p>
+            <h2 id="services-title" class="display mt-4 max-w-4xl text-4xl sm:text-5xl lg:text-6xl">What I can help with</h2>
+          </div><a href="services.html" class="link-arrow shrink-0">View all capabilities <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
         </div>
-        <div class="pt-4 sm:pt-0 sm:px-4 text-center">
-          <div class="text-3xl font-bold tracking-tight text-white">4</div>
-          <div class="mt-1 text-xs font-medium uppercase tracking-wider text-brand-100">Core Capabilities</div>
-        </div>
-        <div class="pt-4 sm:pt-0 sm:px-4 text-center">
-          <div class="text-3xl font-bold tracking-tight text-white">3+</div>
-          <div class="mt-1 text-xs font-medium uppercase tracking-wider text-brand-100">Years Experience</div>
-        </div>
-        <div class="pt-4 sm:pt-0 sm:px-4 text-center">
-          <div class="text-3xl font-bold tracking-tight text-white">Global</div>
-          <div class="mt-1 text-xs font-medium uppercase tracking-wider text-brand-100">Client Base</div>
+        <div class="border-b-[1.5px] border-fg">
+        <a href="web-development.html" class="row-link group grid gap-4 border-t-[1.5px] border-fg px-2 py-8 sm:px-6 lg:grid-cols-[5rem_1.1fr_1.3fr_auto] lg:items-center" data-reveal>
+          <span class="mono text-sm text-muted">01</span>
+          <h3 class="display text-3xl sm:text-4xl">Web Development</h3>
+          <div><p class="text-muted">Business websites, SaaS, e-commerce, dashboards, CMS and custom web platforms.</p><p class="mono mt-3 text-xs text-faint">HTML · JavaScript · Tailwind · React · Node · APIs</p></div>
+          <span class="icon-btn arrow !h-12 !w-12 group-hover:!border-ink group-hover:!bg-ink group-hover:!text-paper" aria-hidden="true"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span>
+        </a>
+        <a href="app-development.html" class="row-link group grid gap-4 border-t-[1.5px] border-fg px-2 py-8 sm:px-6 lg:grid-cols-[5rem_1.1fr_1.3fr_auto] lg:items-center" data-reveal>
+          <span class="mono text-sm text-muted">02</span>
+          <h3 class="display text-3xl sm:text-4xl">App Development</h3>
+          <div><p class="text-muted">Android, iOS, Flutter and cross-platform applications with backend and cloud integration.</p><p class="mono mt-3 text-xs text-faint">Android · iOS · Flutter · Firebase · APIs</p></div>
+          <span class="icon-btn arrow !h-12 !w-12 group-hover:!border-ink group-hover:!bg-ink group-hover:!text-paper" aria-hidden="true"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span>
+        </a>
+        <a href="digital-marketing.html" class="row-link group grid gap-4 border-t-[1.5px] border-fg px-2 py-8 sm:px-6 lg:grid-cols-[5rem_1.1fr_1.3fr_auto] lg:items-center" data-reveal>
+          <span class="mono text-sm text-muted">03</span>
+          <h3 class="display text-3xl sm:text-4xl">Digital Marketing</h3>
+          <div><p class="text-muted">SEO, content, paid search, social, analytics and conversion optimization.</p><p class="mono mt-3 text-xs text-faint">SEO · Google Ads · Analytics · Content</p></div>
+          <span class="icon-btn arrow !h-12 !w-12 group-hover:!border-ink group-hover:!bg-ink group-hover:!text-paper" aria-hidden="true"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span>
+        </a>
+        <a href="agentic-ai.html" class="row-link group grid gap-4 border-t-[1.5px] border-fg px-2 py-8 sm:px-6 lg:grid-cols-[5rem_1.1fr_1.3fr_auto] lg:items-center" data-reveal>
+          <span class="mono text-sm text-muted">04</span>
+          <h3 class="display text-3xl sm:text-4xl">Agentic AI</h3>
+          <div><p class="text-muted">AI support, sales, research and automation workflows with tool integrations.</p><p class="mono mt-3 text-xs text-faint">Agents · LLMs · Automation · Integrations</p></div>
+          <span class="icon-btn arrow !h-12 !w-12 group-hover:!border-ink group-hover:!bg-ink group-hover:!text-paper" aria-hidden="true"><i data-lucide="arrow-up-right" class="h-5 w-5"></i></span>
+        </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-24 bg-gradient-to-b from-slate-50 via-brand-50/30 to-slate-50">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+    <!-- Selected work -->
+    <section class="border-y-[1.5px] border-fg bg-subtle py-24 lg:py-32" aria-labelledby="featured-title">
+      <div class="wrap">
+        <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="eyebrow">02 — Selected Work</p>
+            <h2 id="featured-title" class="display mt-4 max-w-4xl text-4xl sm:text-5xl lg:text-6xl">Featured Client Projects</h2>
+          </div><a href="gallery.html" class="link-arrow shrink-0">Explore full portfolio <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-2">
+          <article class="work-card group " data-reveal>
+            <a href="projects/project-1.html" tabindex="-1" aria-hidden="true" class="thumb block aspect-[16/11]"><img src="assets/images/pf/foraer.PNG" alt="" width="343" height="592" loading="lazy"></a>
+            <div class="p-6 sm:p-8">
+              <span class="chip chip-mono">Web Platform</span>
+              <h3 class="display mt-4 text-3xl">Forare Akuten</h3>
+              <p class="mt-3 text-muted">A multilingual booking platform for transport, cleaning, and moving services.</p>
+              <a href="projects/project-1.html" class="link-arrow mt-6 after:absolute after:inset-0 after:content-['']">View Case Study <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+            </div>
+          </article>
+          <article class="work-card group " data-reveal>
+            <a href="projects/project-2.html" tabindex="-1" aria-hidden="true" class="thumb block aspect-[16/11]"><img src="assets/images/pf/transportcleaner.PNG" alt="" width="347" height="584" loading="lazy"></a>
+            <div class="p-6 sm:p-8">
+              <span class="chip chip-mono">Mobile App</span>
+              <h3 class="display mt-4 text-3xl">Transport Cleaning</h3>
+              <p class="mt-3 text-muted">A responsive service-booking platform built with React and Tailwind CSS.</p>
+              <a href="projects/project-2.html" class="link-arrow mt-6 after:absolute after:inset-0 after:content-['']">View Case Study <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="py-24 lg:py-32" aria-labelledby="about-title">
+      <div class="wrap grid gap-12 lg:grid-cols-[1fr_1.4fr]">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-brand-navy">Selected Work</p>
-          <h2 class="mt-2 text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">Featured Client Projects</h2>
+          <p class="eyebrow">03 — About</p>
+          <h2 id="about-title" class="display mt-4 text-4xl sm:text-5xl lg:text-6xl">MERN Stack &amp; AI Developer.</h2>
+          <p class="mt-6 max-w-md text-lg leading-8 text-muted">I build responsive frontends, dependable backend APIs, and AI-powered tools for businesses, startups, and growing teams.</p>
+          <div class="mt-8 flex flex-wrap gap-3"><a href="about.html" class="btn btn-ghost">About Me <i data-lucide="arrow-right" class="h-4 w-4"></i></a><a href="skills.html" class="btn btn-ghost">View Skills <i data-lucide="arrow-right" class="h-4 w-4"></i></a></div>
         </div>
-        <a href="gallery.html"
-          class="mt-4 md:mt-0 text-sm font-semibold text-brand-navy hover:text-brand-600 transition-colors inline-flex items-center gap-1">
-          Explore full portfolio <i data-lucide="arrow-right" class="h-4 w-4"></i>
-        </a>
+        <div class="grid gap-5 sm:grid-cols-3">
+          <div class="card  p-7" data-reveal><i data-lucide="layout-template" class="h-7 w-7"></i><h3 class="display mt-8 text-2xl">Frontend</h3><p class="mt-2 leading-7 text-muted">React interfaces with clean responsive layouts.</p></div>
+          <div class="card card-accent p-7" data-reveal><i data-lucide="server" class="h-7 w-7"></i><h3 class="display mt-8 text-2xl">Backend</h3><p class="mt-2 leading-7 ">Node.js APIs, MongoDB, authentication, and integrations.</p></div>
+          <div class="card  p-7" data-reveal><i data-lucide="bot" class="h-7 w-7"></i><h3 class="display mt-8 text-2xl">AI Tools</h3><p class="mt-2 leading-7 text-muted">OpenAI assistants, automations, and smart business tools.</p></div>
+        </div>
       </div>
+    </section>
 
-      <div class="grid gap-8 lg:grid-cols-2">
-        <article
-          class="rounded-2xl border border-slate-200/80 bg-white/90 backdrop-blur-sm p-4 shadow-sm hover:shadow-md transition-all group">
-          <a href="projects/project-1.html" class="block overflow-hidden rounded-xl bg-slate-100">
-            <img src="assets/images/pf/foraer.PNG" alt="Forare Akuten"
-              class="aspect-[16/10] w-full object-cover object-top group-hover:scale-102 transition-transform duration-300">
-          </a>
-          <div class="p-4">
-            <span
-              class="inline-block rounded-md bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-navy border border-brand-100">Web
-              Platform</span>
-            <h3 class="mt-3 text-xl font-bold text-brand-navy group-hover:text-brand-600 transition-colors">Forare
-              Akuten</h3>
-            <p class="mt-2 text-sm text-slate-600 leading-relaxed">A multilingual booking platform for transport,
-              cleaning, and moving services.</p>
-            <a href="projects/project-1.html"
-              class="mt-4 inline-flex items-center text-sm font-semibold text-brand-navy group-hover:text-brand-600">
-              View Case Study <i data-lucide="chevron-right" class="ml-1 h-4 w-4"></i>
-            </a>
-          </div>
-        </article>
-
-        <article
-          class="rounded-2xl border border-slate-200/80 bg-white/90 backdrop-blur-sm p-4 shadow-sm hover:shadow-md transition-all group">
-          <a href="projects/project-2.html" class="block overflow-hidden rounded-xl bg-slate-100">
-            <img src="assets/images/pf/transportcleaner.PNG" alt="Transport Cleaning"
-              class="aspect-[16/10] w-full object-cover object-top group-hover:scale-102 transition-transform duration-300">
-          </a>
-          <div class="p-4">
-            <span
-              class="inline-block rounded-md bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-navy border border-brand-100">Mobile
-              App</span>
-            <h3 class="mt-3 text-xl font-bold text-brand-navy group-hover:text-brand-600 transition-colors">Transport
-              Cleaning</h3>
-            <p class="mt-2 text-sm text-slate-600 leading-relaxed">A responsive service-booking platform built with
-              React and Tailwind CSS.</p>
-            <a href="projects/project-2.html"
-              class="mt-4 inline-flex items-center text-sm font-semibold text-brand-navy group-hover:text-brand-600">
-              View Case Study <i data-lucide="chevron-right" class="ml-1 h-4 w-4"></i>
-            </a>
-          </div>
-        </article>
+    <!-- Process -->
+    <section class="on-ink panel-ink py-24 lg:py-32 text-paper" aria-labelledby="process-title">
+      <div class="wrap">
+        <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div><p class="eyebrow !text-[#b2aea2]">04 — Process</p><h2 id="process-title" class="display mt-4 max-w-3xl text-4xl sm:text-5xl lg:text-6xl">A structured approach to building digital products.</h2></div>
+          <a href="process.html" class="link-arrow shrink-0 !border-accent">See how I work <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+        </div>
+        <ol class="process-grid grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="card card-hover accent-hover p-6" data-reveal><span class="mono text-sm text-muted">Phase 01</span><div class="mt-10"><i data-lucide="search" class="h-7 w-7"></i><h3 class="display mt-4 text-2xl">Discovery & Strategy</h3></div></li>
+          <li class="card card-hover accent-hover p-6" data-reveal><span class="mono text-sm text-muted">Phase 02</span><div class="mt-10"><i data-lucide="pen-tool" class="h-7 w-7"></i><h3 class="display mt-4 text-2xl">Architecture & UI/UX Design</h3></div></li>
+          <li class="card card-hover accent-hover p-6" data-reveal><span class="mono text-sm text-muted">Phase 03</span><div class="mt-10"><i data-lucide="code" class="h-7 w-7"></i><h3 class="display mt-4 text-2xl">Agile Engineering</h3></div></li>
+          <li class="card card-hover accent-hover p-6" data-reveal><span class="mono text-sm text-muted">Phase 04</span><div class="mt-10"><i data-lucide="rocket" class="h-7 w-7"></i><h3 class="display mt-4 text-2xl">Quality Assurance & Deployment</h3></div></li>
+        </ol>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="bg-brand-navy py-16 text-white relative overflow-hidden">
-    <div
-      class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-sky-800/30 via-transparent to-transparent pointer-events-none">
-    </div>
-    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+    <!-- Experience -->
+    <section class="py-24 lg:py-32" aria-labelledby="exp-title">
+      <div class="wrap">
+        <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="eyebrow">05 — Experience</p>
+            <h2 id="exp-title" class="display mt-4 max-w-4xl text-4xl sm:text-5xl lg:text-6xl">Building MERN products since 2023.</h2>
+          </div><a href="experience.html" class="link-arrow shrink-0">Full experience <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+        </div>
+        <ul class="border-b-[1.5px] border-fg">
+          <li class="grid gap-2 border-t-[1.5px] border-fg py-7 md:grid-cols-[14rem_1fr_1.2fr] md:gap-8" data-reveal>
+            <p class="mono text-sm text-muted">Jan 2024 – Present</p>
+            <div><h3 class="display text-2xl">ODL Software Company Islamabad</h3><p class="mt-1 font-medium text-muted">MERN Stack Developer</p></div>
+            <p class="leading-7 text-muted">Building scalable web applications using MongoDB, Express.js, React.js, and Node.js.</p>
+          </li>
+          <li class="grid gap-2 border-t-[1.5px] border-fg py-7 md:grid-cols-[14rem_1fr_1.2fr] md:gap-8" data-reveal>
+            <p class="mono text-sm text-muted">Mar 2023 – Present · Weekends</p>
+            <div><h3 class="display text-2xl">FoxMindTech, US</h3><p class="mt-1 font-medium text-muted">MERN Stack Developer · Service/Project Based</p></div>
+            <p class="leading-7 text-muted">Delivering responsive client web solutions on a project basis using the MERN stack.</p>
+          </li>
+          <li class="grid gap-2 border-t-[1.5px] border-fg py-7 md:grid-cols-[14rem_1fr_1.2fr] md:gap-8" data-reveal>
+            <p class="mono text-sm text-muted">Jun 2024 – Present</p>
+            <div><h3 class="display text-2xl">Independent Research Project</h3><p class="mt-1 font-medium text-muted">Full Stack Research Developer</p></div>
+            <p class="leading-7 text-muted">Researching MERN scalability through caching, API optimization, and database indexing. The prototype improved response times by 40%.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="border-y-[1.5px] border-fg bg-subtle py-24 lg:py-32" aria-labelledby="quote-title">
+      <div class="wrap">
+        <p class="eyebrow">06 — Review</p>
+        <h2 id="quote-title" class="sr-only">Trusted for clean and practical work.</h2>
+        <figure class="mt-8">
+          <blockquote><p class="display max-w-5xl text-3xl leading-[1.15] sm:text-5xl">“Yasir delivered a clean and responsive solution with good understanding of frontend, backend, and user experience.”</p></blockquote>
+          <figcaption class="mt-8 flex items-center gap-4"><span class="icon-chip !rounded-full" aria-hidden="true"><i data-lucide="quote" class="h-5 w-5"></i></span><span><strong class="block font-display text-lg">Project Client</strong><span class="text-sm text-muted">Web App Development</span></span></figcaption>
+        </figure>
+        <a href="testimonials.html" class="link-arrow mt-10">Read more <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+      </div>
+    </section>
+
+    <section class="cta py-20 lg:py-28">
+      <div class="wrap flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+        <div class="max-w-4xl">
+          <p class="eyebrow">Next Steps</p>
+          <h2 class="display mt-5 text-5xl sm:text-6xl lg:text-8xl">Ready to build something impactful?</h2>
+          <p class="mt-6 max-w-2xl text-lg">Let's discuss your goals and build a clear path to execution.</p>
+        </div>
+        <a href="contact.html" class="btn !px-8 !py-5 !text-base">Get in Touch <i data-lucide="arrow-up-right" class="h-5 w-5"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-ink overflow-hidden">
+    <div class="wrap pt-16 lg:pt-20">
+      <div class="grid gap-12 lg:grid-cols-[1.3fr_2fr]">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-brand-100">Next Steps</p>
-          <h2 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Ready to build something impactful?</h2>
-          <p class="mt-2 text-brand-100/80 max-w-2xl">Let's discuss your goals and build a clear path to execution.</p>
+          <a href="index.html" class="font-display text-2xl font-bold tracking-tight">YASIR MASOOD<span class="text-accent">.</span></a>
+          <p class="mt-4 max-w-sm leading-relaxed text-[#b2aea2]">Digital products, software architectures, and AI systems tailored for scalable growth.</p>
+          <a href="mailto:yasirkh261@gmail.com" class="mt-6 inline-flex items-center gap-2 border-b-[1.5px] border-accent pb-1 font-display text-lg font-semibold">yasirkh261@gmail.com <i data-lucide="arrow-up-right" class="h-5 w-5"></i></a>
         </div>
-        <a href="contact.html"
-          class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-brand-navy shadow-md hover:bg-slate-100 transition-all">
-          Get in Touch
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="border-t border-slate-200 bg-white text-sm text-slate-600">
-    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-      <div class="grid gap-8 md:grid-cols-4">
-        <div><a href="index.html" class="font-bold text-brand-navy">YASIR MASOOD<span
-              class="text-brand-600">.</span></a>
-          <p class="mt-3 text-xs leading-relaxed text-slate-500">Digital products, software architectures, and AI
-            systems tailored for scalable growth.</p>
-        </div>
+        <div class="grid gap-10 sm:grid-cols-3">
         <div>
-          <h4 class="text-xs font-semibold uppercase tracking-wider text-brand-navy">Capabilities</h4>
-          <ul class="mt-3 space-y-2 text-xs">
-            <li><a class="hover:text-brand-navy" href="web-development.html">Web Development</a></li>
-            <li><a class="hover:text-brand-navy" href="app-development.html">App Development</a></li>
-            <li><a class="hover:text-brand-navy" href="digital-marketing.html">Digital Marketing</a></li>
-            <li><a class="hover:text-brand-navy" href="agentic-ai.html">Agentic AI</a></li>
+          <h2 class="mono text-xs font-medium uppercase tracking-[.14em] text-[#b2aea2]">Capabilities</h2>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="web-development.html">Web Development</a></li>
+            <li><a href="app-development.html">App Development</a></li>
+            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+            <li><a href="agentic-ai.html">Agentic AI</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-xs font-semibold uppercase tracking-wider text-brand-navy">Company</h4>
-          <ul class="mt-3 space-y-2 text-xs">
-            <li><a class="hover:text-brand-navy" href="gallery.html">Work Gallery</a></li>
-            <li><a class="hover:text-brand-navy" href="about.html">About</a></li>
-            <li><a class="hover:text-brand-navy" href="skills.html">Skills</a></li>
-            <li><a class="hover:text-brand-navy" href="experience.html">Experience</a></li>
-            <li><a class="hover:text-brand-navy" href="process.html">Process</a></li>
+          <h2 class="mono text-xs font-medium uppercase tracking-[.14em] text-[#b2aea2]">Company</h2>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="gallery.html">Work Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-xs font-semibold uppercase tracking-wider text-brand-navy">Connect</h4>
-          <ul class="mt-3 space-y-2 text-xs">
-            <li><a class="hover:text-brand-navy" href="mailto:yasirkh261@gmail.com">Email</a></li>
-            <li><a class="hover:text-brand-navy" href="https://www.linkedin.com/in/yasir-masood-bbb873240/">LinkedIn</a>
-            </li>
-            <li><a class="hover:text-brand-navy" href="https://github.com">GitHub</a></li>
+          <h2 class="mono text-xs font-medium uppercase tracking-[.14em] text-[#b2aea2]">Connect</h2>
+          <ul class="mt-5 space-y-3 text-[15px]">
+            <li><a href="mailto:yasirkh261@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/yasir-masood-bbb873240/">LinkedIn</a></li>
+            <li><a href="https://github.com">GitHub</a></li>
           </ul>
         </div>
+        </div>
       </div>
-      <div
-        class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-6 text-xs text-slate-400 sm:flex-row">
+      <div class="mt-14 flex flex-col items-start justify-between gap-2 border-t border-white/15 pt-6 text-xs text-[#b2aea2] sm:flex-row sm:items-center">
         <p>&copy; <span data-year>2026</span> Yasir Masood. All rights reserved.</p>
         <p>Built with modern web standards.</p>
       </div>
     </div>
+    <div class="wordmark mt-6 px-4 pb-6 text-center" aria-hidden="true">YASIR MASOOD</div>
   </footer>
 
   <script src="js/main.js" defer></script>
